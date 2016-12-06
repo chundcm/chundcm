@@ -1,0 +1,35 @@
+
+{
+  "id": "nodejsapp",
+  "cmd": null,
+  "cpus": 1,
+  "mem": 512,
+  "disk": 0,
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "lane/nodejs_app:latest",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "hostPort": 8000,
+          "servicePort": 9000,
+          "protocol": "tcp",
+          "labels": {}
+        }
+      ],
+      "privileged": false,
+      "parameters": [],
+      "forcePullImage": false
+    }
+  },
+  "env": {},
+  "labels": {},
+  "healthChecks": [],
+  "acceptedResourceRoles": [
+    "slave_public"
+  ]
+}
